@@ -1,4 +1,27 @@
+.numero-correos-formulario {
+  display: flex;
+  justify-content: center; /* Centrar input */
+  margin: 20px 0; /* Separación vertical */
+}
+
 .numero-correos-formulario .numero-input {
-  padding: 5px;
+  width: 200px; /* Ancho fijo */
+  padding: 10px 15px; /* Espaciado interno */
   font-size: 16px;
+  border: 2px solid #ccc; /* Borde gris suave */
+  border-radius: 8px; /* Bordes redondeados */
+  outline: none; /* Quita el borde azul por defecto */
+  transition: all 0.3s ease; /* Animación suave */
+}
+
+/* Cuando el input tiene el foco */
+.numero-correos-formulario .numero-input:focus {
+  border-color: #007bff; /* Azul cuando está activo */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Resplandor azul */
+}
+
+/* Placeholder con estilo */
+.numero-correos-formulario .numero-input::placeholder {
+  color: #888;
+  font-style: italic;
 }
