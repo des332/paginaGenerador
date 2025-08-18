@@ -1,12 +1,59 @@
 .grid-telefonos {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
-  gap: 8px 20px; /* espacio entre filas y columnas */
-  max-width: 800px; /* opcional: limita el ancho total */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(220px, 1fr)
+  ); /* 3 columnas iguales */
+  gap: 12px 20px; /* espacio entre filas y columnas */
+  max-width: 900px; /* opcional: limita el ancho total */
+  margin: 20px auto;
+  padding: 10px;
+}
+
+/* Ocultamos los checkboxes originales */
+.opcion-telefono input[type="checkbox"] {
+  display: none;
 }
 
 .opcion-telefono {
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 15px;
+  position: relative;
+  padding-left: 30px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #333;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+/* Estilo de la cajita */
+.opcion-telefono::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Efecto cuando está marcado */
+.opcion-telefono input[type="checkbox"]:checked + span::before {
+  background: #007bff;
+  border-color: #007bff;
+}
+
+/* Texto cambia al estar marcado */
+.opcion-telefono input[type="checkbox"]:checked + span {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Hover */
+.opcion-telefono:hover::before {
+  border-color: #0056b3;
 }

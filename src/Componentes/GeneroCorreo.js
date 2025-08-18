@@ -20,7 +20,7 @@ function GeneroCorreo({ value, onChange }) {
           checked={value.includes("Hombre")}
           onChange={() => manejarCambio("Hombre")}
         />
-        Hombre
+        <span>Hombre</span>
       </label>
       <label>
         <input
@@ -28,7 +28,7 @@ function GeneroCorreo({ value, onChange }) {
           checked={value.includes("Mujer")}
           onChange={() => manejarCambio("Mujer")}
         />
-        Mujer
+        <span>Mujer</span>
       </label>
     </div>
   );
