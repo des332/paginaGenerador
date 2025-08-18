@@ -4,108 +4,117 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #a9421e, #5a1d10);
+  color: #333;
+}
+
 .App {
-  /*display: flex;*/
-  /*flex-wrap: wrap;*/
-  /*flex-direction: column;*/
-  /*align-items: center;*/
   width: 100%;
   min-height: 100vh;
-  /*padding-top: 10px;*/
-  background-color: rgb(169, 66, 30);
-  /*font-family: Impact, sans-serif;*/
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 40px;
 }
+
+/* 🔹 Header */
 .contenedor-titulo {
   width: 100%;
-  /*height: 15px;*/
-  background-color: rgb(29, 60, 52);
+  background-color: #1d3c34;
   padding: 25px;
-  /*margin: 10px 0;*/
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-bottom: 5px solid #f3dd9b;
 }
 
 .titulo {
-  font-size: 30px;
-  /*font-weight: bold;*/
-  color: rgb(243, 221, 155);
+  font-size: 32px;
+  font-weight: bold;
+  color: #f3dd9b;
   font-family: Impact, sans-serif;
   text-align: center;
   margin-bottom: 15px;
-}
-
-.imagen-contenedor {
-  /*width: 100%;
-  margin: 20px;*/
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  letter-spacing: 1.5px;
 }
 
 .imagenReservas {
-  width: 200px;
+  width: 160px;
   height: auto;
+  filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.5));
 }
 
+/* 🔹 Contenedor principal */
 .contenedor-contenido {
-  width: 75%;
-  min-height: 500px;
-  background-color: rgb(243, 221, 155);
-  padding: 10px;
-  margin-top: 25px;
-  border-radius: 15px;
+  width: 85%;
+  max-width: 900px;
+  background-color: #f3dd9b;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
-.numero-correos {
-  margin: 10px;
-  font-size: 20px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-
-.numero-correos-contenedor {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.estructura-correo {
-  margin: 10px;
-  font-size: 20px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-
-.estructura-correo-contenedor {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* espacio entre texto y formulario */
-}
-
-.genero-contenedor {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* espacio entre texto y formulario */
-}
-
-.genero {
-  margin: 10px;
-  font-size: 20px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-
+/* 🔹 Secciones */
+.numero-correos,
+.estructura-correo,
+.genero,
 .numero-telefono {
-  margin: 10px;
-  font-size: 20px;
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 600;
   font-family: Georgia, "Times New Roman", Times, serif;
+  color: #1d3c34;
 }
 
-.boton {
-  margin: 10px;
+.numero-correos-contenedor,
+.estructura-correo-contenedor,
+.genero-contenedor,
+.numero-telefono-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap; /* 🔹 Para responsividad */
+  margin-bottom: 20px;
 }
 
-.boton-contenedor:hover {
-  background-color: chocolate;
+/* 🔹 Botón principal */
+.boton-contenedor button {
+  padding: 12px 24px;
+  background-color: #1d3c34;
+  color: #f3dd9b;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.boton-contenedor button:hover {
+  background-color: #2f5d4f;
+  transform: scale(1.05);
+}
+
+/* 🔹 Resultados */
+.resultados {
+  margin-top: 30px;
+}
+
+.resultados h3 {
+  font-size: 22px;
+  color: #1d3c34;
+  margin-bottom: 15px;
+}
+
+.resultados a {
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+.resultados a:hover {
+  color: #ff6600;
+  text-decoration: none;
 }
