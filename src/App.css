@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  /*display: flex;*/
+  /*flex-wrap: wrap;*/
+  /*flex-direction: column;*/
+  /*align-items: center;*/
+  width: 100%;
+  min-height: 100vh;
+  /*padding-top: 10px;*/
+  background-color: rgb(169, 66, 30);
+  /*font-family: Impact, sans-serif;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contenedor-titulo {
+  width: 100%;
+  /*height: 15px;*/
+  background-color: rgb(29, 60, 52);
+  padding: 25px;
+  /*margin: 10px 0;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo {
+  font-size: 30px;
+  /*font-weight: bold;*/
+  color: rgb(243, 221, 155);
+  font-family: Impact, sans-serif;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.imagen-contenedor {
+  /*width: 100%;
+  margin: 20px;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagenReservas {
+  width: 200px;
+  height: auto;
+}
+
+.contenedor-contenido {
+  width: 75%;
+  min-height: 500px;
+  background-color: rgb(243, 221, 155);
+  padding: 10px;
+  margin-top: 25px;
+  border-radius: 15px;
+}
+
+.numero-correos {
+  margin: 10px;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.numero-correos-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.estructura-correo {
+  margin: 10px;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.estructura-correo-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espacio entre texto y formulario */
+}
+
+.genero-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espacio entre texto y formulario */
+}
+
+.genero {
+  margin: 10px;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.numero-telefono {
+  margin: 10px;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.boton {
+  margin: 10px;
+}

@@ -1,0 +1,12 @@
+.grid-telefonos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  gap: 8px 20px; /* espacio entre filas y columnas */
+  max-width: 800px; /* opcional: limita el ancho total */
+}
+
+.opcion-telefono {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}

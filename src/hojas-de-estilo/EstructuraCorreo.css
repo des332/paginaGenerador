@@ -1,0 +1,23 @@
+.estructura-correo-formulario {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.primer-input,
+.segundo-input {
+  width: 60px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.guion {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.dominio-select {
+  padding: 5px;
+  font-size: 16px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
