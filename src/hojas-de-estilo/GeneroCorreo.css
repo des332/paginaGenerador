@@ -10,26 +10,32 @@
 
 /* Ocultamos el checkbox nativo */
 .genero-formulario input[type="checkbox"] {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* Estilo del contenedor label */
 .genero-formulario label {
   display: flex;
   align-items: center;
-  gap: 8px;
   cursor: pointer;
-  position: relative;
-  padding-left: 28px;
   user-select: none;
   transition: color 0.3s ease;
 }
 
-/* El "checkbox" personalizado */
-.genero-formulario label::before {
+/* El texto + caja */
+.genero-formulario label > span {
+  position: relative;
+  padding-left: 28px;
+}
+
+/* La cajita personalizada */
+.genero-formulario label > span::before {
   content: "";
   position: absolute;
   left: 0;
+  top: 2px;
   width: 20px;
   height: 20px;
   border: 2px solid #007bff;
@@ -44,13 +50,13 @@
   border-color: #007bff;
 }
 
-/* Texto con efecto cuando está marcado */
+/* Texto marcado */
 .genero-formulario input[type="checkbox"]:checked + span {
   color: #007bff;
   font-weight: bold;
 }
 
-/* Animación al hacer hover */
-.genero-formulario label:hover::before {
+/* Hover */
+.genero-formulario label:hover > span::before {
   border-color: #0056b3;
 }

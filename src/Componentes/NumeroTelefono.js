@@ -57,7 +57,7 @@ function NumeroTelefono({ value, onChange }) {
             checked={value.includes(opcion)}
             onChange={() => manejarCambio(opcion)}
           />
-          {opcion}
+          <span>{opcion}</span>
         </label>
       ))}
     </div>

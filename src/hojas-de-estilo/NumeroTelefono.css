@@ -1,38 +1,41 @@
 .grid-telefonos {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(220px, 1fr)
-  ); /* 3 columnas iguales */
-  gap: 12px 20px; /* espacio entre filas y columnas */
-  max-width: 900px; /* opcional: limita el ancho total */
+  grid-template-columns: repeat(3, minmax(220px, 1fr)); /* 3 columnas */
+  gap: 12px 20px;
+  max-width: 900px;
   margin: 20px auto;
   padding: 10px;
 }
 
-/* Ocultamos los checkboxes originales */
+/* Ocultamos visualmente pero conservamos accesibilidad */
 .opcion-telefono input[type="checkbox"] {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .opcion-telefono {
   display: flex;
   align-items: center;
+  cursor: pointer;
   font-size: 15px;
-  position: relative;
-  padding-left: 30px;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #333;
-  cursor: pointer;
   user-select: none;
-  transition: color 0.3s ease;
 }
 
-/* Estilo de la cajita */
-.opcion-telefono::before {
+/* Texto + espacio para cajita */
+.opcion-telefono > span {
+  position: relative;
+  padding-left: 28px;
+}
+
+/* Cajita personalizada */
+.opcion-telefono > span::before {
   content: "";
   position: absolute;
   left: 0;
+  top: 1px;
   width: 18px;
   height: 18px;
   border: 2px solid #007bff;
@@ -41,19 +44,30 @@
   transition: all 0.3s ease;
 }
 
-/* Efecto cuando está marcado */
+/* Marcado */
 .opcion-telefono input[type="checkbox"]:checked + span::before {
   background: #007bff;
   border-color: #007bff;
 }
 
-/* Texto cambia al estar marcado */
 .opcion-telefono input[type="checkbox"]:checked + span {
   color: #007bff;
   font-weight: bold;
 }
 
 /* Hover */
-.opcion-telefono:hover::before {
+.opcion-telefono:hover > span::before {
   border-color: #0056b3;
+}
+
+/* (Opcional) Responsivo: 2 columnas en tablet, 1 en móvil */
+@media (max-width: 900px) {
+  .grid-telefonos {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .grid-telefonos {
+    grid-template-columns: 1fr;
+  }
 }
