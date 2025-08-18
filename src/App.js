@@ -102,16 +102,20 @@ function App() {
 
       // 🔹 Elegimos nombre según género
       let nombre = "";
-      if (genero.includes("Hombre")) {
+      if (genero.includes("Hombre") && genero.includes("Mujer")) {
+        // Si eligió ambos → mezclar listas
+        const todosNombres = [...nombresHombres, ...nombresMujeres];
+        nombre = todosNombres[Math.floor(Math.random() * todosNombres.length)];
+      } else if (genero.includes("Hombre")) {
         nombre =
           nombresHombres[Math.floor(Math.random() * nombresHombres.length)];
       } else if (genero.includes("Mujer")) {
         nombre =
           nombresMujeres[Math.floor(Math.random() * nombresMujeres.length)];
       } else {
-        // Si no se seleccionó género → mezcla ambos
-        const todosNombres = [...nombresHombres, ...nombresMujeres];
-        nombre = todosNombres[Math.floor(Math.random() * todosNombres.length)];
+        // Si no seleccionó nada → hombre
+        nombre =
+          nombresHombres[Math.floor(Math.random() * nombresHombres.length)];
       }
 
       // 🔹 Elegimos apellido
