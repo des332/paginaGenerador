@@ -106,6 +106,19 @@ export const nombresHombres = [
   "bowen",
   "easton",
   "garrett",
+  "brandon",
+  "kevin",
+  "scott",
+  "brian",
+  "patrick",
+  "jeremy",
+  "logan",
+  "cole",
+  "gabriel",
+  "chase",
+  "dean",
+  "shane",
+  "miles",
 ];
 
 export const nombresMujeres = [
